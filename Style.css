@@ -1,0 +1,83 @@
+body{
+    background-image: url(./fotos/fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+}
+.logo{
+    position: absolute;
+    width: 15%;
+    height: 20%;
+
+}
+.mensaje{
+    position: absolute;
+    top:89%;
+    width: 45%;
+    left: 1%;
+}
+.mensaje2{
+    position: absolute;
+    top:2%;
+    width: 30%;
+    left: 28%;
+}
+.boletos{
+    position: absolute;
+    top:30%;
+    width: 15%;
+    left: 32%; 
+}
+
+article{
+    position: relative;
+    width: 14%;
+    left: 10%;
+    top: 25%;
+    transition: all .3s ease; 
+}
+article img:first-child{
+    box-shadow: 0 1px 19px 5px #F06292;
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+
+}
+article img:last-child {
+position: absolute;
+width: 100%;
+bottom: 10%;
+left: 0;
+right: 0;
+margin: auto;
+transform: translateY(25%);
+transition: all .3s ease; 
+opacity: 0;
+}
+article:hover{
+    transform:
+    perspective(250px)
+    translateY(-5%)
+    translateZ(0) ;
+}
+article::before {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+opacity: 0;
+transition: all .3s ease; 
+}
+
+article:hover::before{
+    opacity: 1;
+}
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
+}
